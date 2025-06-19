@@ -2,7 +2,7 @@
 COMPILER_PREFIX = ../compiler/prefix
 
 # Prefix to use before all binutils, gcc and gdb commands.
-BINROOT = ${COMPILER_PREFIX}/bin/aarch64-elf-
+BINROOT = ${COMPILER_PREFIX}/bin/aarch64-none-elf-
 
 .PHONY: all
 all:

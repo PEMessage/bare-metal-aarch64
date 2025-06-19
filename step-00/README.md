@@ -44,7 +44,7 @@ Assuming you are still inside the `compiler` directory, we now need to run the
 following commands to define a couple of environment variables.
 ```sh
 export PREFIX="$PWD/prefix"     # Installation prefix.
-export TARGET=aarch64-elf       # Target architecture.
+export TARGET=aarch64-none-elf       # Target architecture.
 export PATH="$PREFIX/bin:$PATH" # Put (not yet) installed stuff in the PATH.
 ```
 
@@ -97,7 +97,7 @@ follows, at the top of your `Makefile`.
 COMPILER_PREFIX = compiler/prefix
 
 # Prefix to use before all binutils, gcc and gdb commands.
-BINROOT = ${COMPILER_PREFIX}/bin/aarch64-elf-
+BINROOT = ${COMPILER_PREFIX}/bin/aarch64-none-elf-
 ```
 You may need to adapt the definition of `COMPILER_PREFIX` depending on how you
 installed Binutils, GCC and GDB. In this repository, `COMPILER_PREFIX` will be
@@ -112,4 +112,4 @@ following target can be added to your `Makefile` to try this.
 all:
 	@${BINROOT}gcc --version | head -n 1
 ```
-Running `make` should output the line `aarch64-elf-gcc (GCC) 11.2.0`.
+Running `make` should output the line `aarch64-none-elf-gcc (GCC) 11.2.0`.

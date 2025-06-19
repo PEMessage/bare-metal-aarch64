@@ -2,7 +2,7 @@
 COMPILER_PREFIX = ../compiler/prefix
 
 # Prefix to use before all binutils, gcc and gdb commands.
-BINROOT = ${COMPILER_PREFIX}/bin/aarch64-elf-
+BINROOT = ${COMPILER_PREFIX}/bin/aarch64-none-elf-
 
 # Variable used to control the printing of commands.
 # Printing is disabled by default (due to the "@").

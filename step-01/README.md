@@ -137,7 +137,7 @@ we generated make sense, we can rely `objdump` (for the ELF-format files), and
 
 Let us start by running
 ```sh
-./compiler/prefix/bin/aarch64-elf-objdump -d boot.o
+./compiler/prefix/bin/aarch64-none-elf-objdump -d boot.o
 ```
 which produces the following output (irrelevant header removed).
 ```
@@ -154,7 +154,7 @@ be (hopefully) moved to start at address `0x80000` by the linker.
 
 We now check the generated ELF file by running
 ```sh
-./compiler/prefix/bin/aarch64-elf-objdump -d kernel8.elf
+./compiler/prefix/bin/aarch64-none-elf-objdump -d kernel8.elf
 ```
 which produces the following output (irrelevant header removed).
 ```

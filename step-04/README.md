@@ -42,7 +42,7 @@ to make the generated assembly easier to relate to the C source code.
 After having compiled `kernel.c` using `make kernel.o`, we can now inspect the
 generated assembly using the command
 ```
-./compiler/prefix/bin/aarch64-elf-objdump -d kernel.o
+./compiler/prefix/bin/aarch64-none-elf-objdump -d kernel.o
 ```
 which produces the following output (irrelevant header removed).
 ```
@@ -238,7 +238,7 @@ void kernel_entry(void *dtb, u64 x1, u64 x2, u64 x3){
 ```
 After compiling this code, we can use the command
 ```
-./compiler/prefix/bin/aarch64-elf-objdump -D kernel.o
+./compiler/prefix/bin/aarch64-none-elf-objdump -D kernel.o
 ```
 (note the `-D` instead of `-d`) to disassemble all sections of `kernel.o`. The
 output is the following (irrelevant header and ".comment" section removed: the
