@@ -192,9 +192,9 @@ If you have version 6.1.0 or greater then everything looks good.
 
 The command we will use to run QEMU is the following.
 ```sh
-qemu-system-aarch64 -M raspi3 -nographic -kernel kernel8.img
+qemu-system-aarch64 -M raspi3b -nographic -kernel kernel8.img
 ```
-The option `-M raspi3` specifies that we want our code to run on the Raspberry
+The option `-M raspi3b` specifies that we want our code to run on the Raspberry
 Pi 3. The option `-nographic` disables graphical output since we won't use the
 computer's screen (the plan is to communicate with the virtual machine using a
 serial port, or with GDB). The last option `-kernel kernel8.img` specifies the
@@ -207,7 +207,7 @@ we add the following target to our `Makefile`.
 run: kernel8.img
 	@echo "[QEMU]    running with $<"
 	@echo "(Press Ctrl-A X to exit QEMU.)"
-	${Q}qemu-system-aarch64 -M raspi3 -nographic -kernel $<
+	${Q}qemu-system-aarch64 -M raspi3b -nographic -kernel $<
 ```
 You can then run our kernel image using `make run`.
 

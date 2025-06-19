@@ -35,13 +35,13 @@ kernel8.img: kernel8.elf
 run: kernel8.img
 	@echo "[QEMU]    running with $<"
 	@echo "(Press Ctrl-A X to exit QEMU.)"
-	${Q}qemu-system-aarch64 -M raspi3 -nographic -kernel $<
+	${Q}qemu-system-aarch64 -M raspi3b -nographic -kernel $<
 
 .PHONY: run-gdb
 run-gdb: kernel8.img
 	@echo "[QEMU]    running with $< (waiting for GDB)"
 	@echo "(Press Ctrl-A X to exit QEMU.)"
-	${Q}qemu-system-aarch64 -s -S -M raspi3 -nographic -kernel $<
+	${Q}qemu-system-aarch64 -s -S -M raspi3b -nographic -kernel $<
 
 .PHONY: gdb
 gdb: kernel8.elf

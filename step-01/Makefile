@@ -28,7 +28,7 @@ kernel8.img: kernel8.elf
 run: kernel8.img
 	@echo "[QEMU]    running with $<"
 	@echo "(Press Ctrl-A X to exit QEMU.)"
-	${Q}qemu-system-aarch64 -M raspi3 -nographic -kernel $<
+	${Q}qemu-system-aarch64 -M raspi3b -nographic -kernel $<
 
 .PHONY: clean
 clean:

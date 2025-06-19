@@ -18,7 +18,7 @@ make things more convenient, we can use the following `Makefile` target.
 run-gdb: kernel8.img
 	@echo "[QEMU]    running with $<"
 	@echo "(Press Ctrl-A X to exit QEMU.)"
-	${Q}qemu-system-aarch64 -s -S -M raspi3 -nographic -kernel $<
+	${Q}qemu-system-aarch64 -s -S -M raspi3b -nographic -kernel $<
 ```
 We will hence just need to run `make run-gdb` to launch QEMU, and have it wait
 for GDB to connect.

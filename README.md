@@ -1,8 +1,8 @@
-Bare-metal experimentation tutorial (aarch64, raspi3)
+Bare-metal experimentation tutorial (aarch64, raspi3b)
 =====================================================
 
 This repo is mostly intended as notes to myself, while I try to understand how
-to run bare-metal programs on the Raspberry Pi 3 (or `raspi3`), using a mix of
+to run bare-metal programs on the Raspberry Pi 3 (or `raspi3b`), using a mix of
 Arm64 (`aarch64`) assembly and C code.
 
 My initial goal is to understand how the exception levels (`EL`) work in order

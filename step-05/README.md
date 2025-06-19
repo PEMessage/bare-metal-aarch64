@@ -225,7 +225,7 @@ UART1 be connected to the monitor's standard input-outputs (i.e., in the shell
 form which we call QEMU).
 ```make
 # Flags passed to QEMU.
-QEMU_FLAGS = -M raspi3 -nographic -serial null -serial mon:stdio
+QEMU_FLAGS = -M raspi3b -nographic -serial null -serial mon:stdio
 
 .PHONY: run
 run: kernel8.img

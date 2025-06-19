@@ -13,7 +13,7 @@ Q = @
 GCC_FLAGS = -ffreestanding -Wall -Wextra -Werror -pedantic -O0 -I ./include
 
 # Flags passed to QEMU.
-QEMU_FLAGS = -M raspi3 -nographic -serial null -serial mon:stdio
+QEMU_FLAGS = -M raspi3b -nographic -serial null -serial mon:stdio
 
 .PHONY: all
 all: kernel8.img

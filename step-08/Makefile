@@ -18,7 +18,7 @@ GCC_FLAGS = \
 	-mgeneral-regs-only
 
 # Flags passed to QEMU.
-QEMU_FLAGS = -M raspi3 -nographic -serial null -serial mon:stdio
+QEMU_FLAGS = -M raspi3b -nographic -serial null -serial mon:stdio
 
 .PHONY: all
 all: kernel8.img
